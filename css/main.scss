@@ -1,0 +1,326 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:500,600,700&display=swap');
+@import 'vars';
+
+/* universal styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background: #fff;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: color(neutral-vdarkviolet);
+}
+
+.links-title {font-weight: 700;}
+
+p, a {font-weight: 500;}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.6rem ;
+}
+h3 {
+    font-size: 1.3rem;
+}
+p {
+    font-size: 1rem;
+    color: color(neutral-grayviolet);
+}
+a {
+    font-size: .9rem;
+    color: color(neutral-grayviolet);
+    text-decoration: none;
+}
+.links-title {
+    font-size: .9rem;
+    color: #fff;
+}
+
+.btn-cyan {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    color: #fff;
+    background-color: color(primary-cyan);
+    padding: 16px 40px;
+    border-radius: 40px;
+}
+
+.btn-cyan:hover {
+    background-color: lighten(color(primary-cyan), 15%);
+}
+
+/* header section */
+
+@import 'menu';
+
+/* hero section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1f;
+    background: #fff;
+
+    .hero-image {
+        position: relative;
+        grid-row: 1 / 2;
+        width: 100vw;
+        height: 384px;
+        overflow: hidden;
+
+
+        img {
+            position: absolute;
+            height: 310px;
+            left: 30px;
+        }
+    }
+
+    .hero-text {
+        grid-row: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 20px;
+            line-height: 2.9rem;
+            width: 315px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            width: 315px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+/* URL shorten section */
+
+@import 'shorten';
+
+/* short-links */
+
+.short-links {
+    background: #F0F1F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0 0;
+        width: 100%;
+        max-width: 325px;
+        height: max-content;
+        border-radius: 10px;
+        background: #fff;
+
+        .item-link {
+            margin: 0px 0px;
+            cursor: pointer;
+            color: color(neutral-vdarkviolet);
+            width: 100%;
+            border-bottom: 1px solid color(neutral-gray);
+            padding: 15px 15px;
+        }
+
+        .item-shortlink {
+            padding: 15px 15px;
+            cursor: pointer;
+            color: color(primary-cyan);
+        }
+
+        .copy-btn {
+            align-self: center;
+            width: 295px;
+            height: 40px;
+            margin: 0px 0px 15px;
+            border: none;
+            background-color: color(primary-cyan);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: lighten(color(primary-cyan), 15%);
+        }
+
+        .copied-btn {
+            background-color: color(primary-darkviolet);
+        }
+
+        .copied-btn:hover {
+            background-color: lighten(color(primary-darkviolet), 15%);
+        }
+    }
+}
+
+/* Features Section */
+
+.features {
+    padding-top: 90px;
+    background: #F0F1F6;
+
+    .features-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin:20px 0 90px 0;
+            width: 295px;
+            text-align: center;
+        }
+    }
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        margin: 0 0 90px ;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 325px;
+        text-align: center;
+        background-color: #fff;
+        z-index: 2;
+        border-radius: 5px;
+
+
+        .card-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -45px;
+            background-color: color(primary-darkviolet);
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        h3 {
+            margin-top: 80px;
+        }
+
+        p {
+            margin: 20px 30px ;
+        }
+    }
+
+    .line {
+        position: absolute;
+        z-index: 0;
+        width: 8px;
+        height: 1000px;
+        background-color: color(primary-cyan);
+    }
+}
+
+/* CTA section */
+
+.cta {
+    background-color: color(primary-darkviolet);
+    background-image: url(../images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    h2 {
+        color: #fff;
+        margin: 100px 0 20px;
+    }
+
+    a {
+        margin-bottom: 80px;
+    }
+}
+
+/* footer section */
+
+footer {
+    background-color: color(neutral-vdarkviolet);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+
+
+
+    .logo-color {
+        fill: #fff;
+    }
+
+    .footer-links {
+        text-align: center;
+        list-style: none;
+
+        .links-title {
+            margin: 40px 0 20px;
+        }
+
+        .footer-link {
+            margin-bottom: 5px;
+
+            a:hover {
+                color: color(primary-cyan);
+            }
+        }
+    }
+
+    .social-links {
+        display: flex;
+        margin: 40px 0 0;
+
+        .social-link {
+            margin: 0 15px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .social-link:hover {
+
+            .social-icon {
+                fill: color(primary-cyan);
+            }
+        }
+
+    }
+}
+
+/* Media Queries */
+
+@import 'mixins';
